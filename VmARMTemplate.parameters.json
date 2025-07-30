@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "publicIpName": {
+            "value": "mypulic-IP"  
+        },
+        "location": {
+            "value": ""  
+        },
+        "publicIpSku": {
+            "value": "myPublicIpSku"  
+        },
+        "publicIPAllocationMethod": {
+            "value": ""  
+        },
+        "vmName": {
+            "value": "Vnet-1"  
+        },
+        "vmSize": {
+            "value": ""  
+        },
+        "adminUsername": {
+            "value": ""  
+        },
+        "adminPassword": {
+            "value": ""  
+        },
+        "OSVersion": {
+            "value": ""  
+        },
+        "securityType": {
+            "value": ""  
+        }
+    }
+}
