@@ -72,7 +72,7 @@
         "subnetName": "default",
         "subnetPrefix": "10.0.0.0/24",
         "nicName": "myVM-nic",
-        "securityProfileJson": "null"
+        "securityProfileJson": "TrustedLaunch"
     },
 
     "resources": [
