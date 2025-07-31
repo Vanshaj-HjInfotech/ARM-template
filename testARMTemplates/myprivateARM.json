@@ -105,6 +105,7 @@
   },
   "variables": {
     "nicName": "myVMNic",
+    "nicName-2": "myVMNic-1",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "default",
     "subnetPrefix": "10.0.0.0/24",
@@ -254,6 +255,7 @@
             }
           ]
         },
+        
         "securityProfile": "[if(equals(parameters('securityType'), 'TrustedLaunch'), variables('securityProfileJson'), null())]"
       },
       "dependsOn": [
@@ -266,7 +268,7 @@
       "name": "Vm-2",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkInterfaces', 'myVMNic-1')]"
+        "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName-2'))]"
       ],
       "properties": {
         "hardwareProfile": {
@@ -301,7 +303,7 @@
         "networkProfile": {
           "networkInterfaces": [
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces', 'myVMNic-1')]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName-2'))]"
             }
           ]
         }
