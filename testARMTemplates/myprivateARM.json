@@ -106,8 +106,8 @@
   "variables": {
     "nicName": "myVMNic-1",
     "addressPrefix": "10.0.0.0/16",
-    "subnetName": "default-1",
-    "subnetPrefix": "10.0.1.0/24",
+    "subnetName": "default",
+    "subnetPrefix": "10.0.0.0/24",
     "virtualNetworkName": "MyVNET",
     "networkSecurityGroupName": "default-NSG-1",
     "securityProfileJson": {
@@ -179,6 +179,12 @@
               "networkSecurityGroup": {
                 "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
               }
+            }
+          },
+          {
+            "name": "subnet-2",
+            "properties": {
+              "addressPrefix": "10.0.1.0/24"
             }
           }
         ]
