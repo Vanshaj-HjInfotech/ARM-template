@@ -19,7 +19,7 @@
     
     "publicIpName": {
       "type": "string",
-      "defaultValue": "myPublicIP",
+      "defaultValue": "myPublicIP-1",
       "metadata": {
         "description": "Name for the Public IP used to access the Virtual Machine."
       }
@@ -86,7 +86,7 @@
     },
     "vmName": {
       "type": "string",
-      "defaultValue": "VM-1",
+      "defaultValue": "VM-2",
       "metadata": {
         "description": "Name of the virtual machine."
       }
@@ -104,12 +104,12 @@
     }
   },
   "variables": {
-    "nicName": "myVMNic",
+    "nicName": "myVMNic-1",
     "addressPrefix": "10.0.0.0/16",
-    "subnetName": "default",
-    "subnetPrefix": "10.0.0.0/24",
+    "subnetName": "default-1",
+    "subnetPrefix": "10.0.1.0/24",
     "virtualNetworkName": "MyVNET",
-    "networkSecurityGroupName": "default-NSG",
+    "networkSecurityGroupName": "default-NSG-1",
     "securityProfileJson": {
       "uefiSettings": {
         "secureBootEnabled": true,
@@ -155,20 +155,8 @@
               "sourceAddressPrefix": "*",
               "destinationAddressPrefix": "*"
             }
-          },
-          {
-            "name": "defaultPrivateSubnetRule",
-            "properties": {
-              "priority": 100,
-              "access": "Allow",
-              "direction": "Inbound",
-              "destinationPortRange": "*",
-              "protocol": "*",
-              "sourcePortRange": "*",
-              "sourceAddressPrefix": "10.0.0.0/16",
-              "destinationAddressPrefix": "*"
-            }
           }
+          
         ]
       }
     },
