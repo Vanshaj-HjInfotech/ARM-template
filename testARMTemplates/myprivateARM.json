@@ -40,6 +40,7 @@
     },
     "OSVersion": {
       "type": "string",
+      "defaultValue": "2022-datacenter-azure-edition",
       "allowedValues": [
         "2016-datacenter-gensecond",
         "2016-datacenter-server-core-g2",
@@ -250,14 +251,7 @@
             "managedDisk": {
               "storageAccountType": "StandardSSD_LRS"
             }
-          },
-          "dataDisks": [
-            {
-              "diskSizeGB": 1023,
-              "lun": 0,
-              "createOption": "Empty"
-            }
-          ]
+          }
         },
         "networkProfile": {
           "networkInterfaces": [
@@ -299,9 +293,5 @@
     }
   ],
   "outputs": {
-    "hostname": {
-      "type": "string",
-      "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIpName')), '2022-05-01').dnsSettings.fqdn]"
-    }
   }
 }
